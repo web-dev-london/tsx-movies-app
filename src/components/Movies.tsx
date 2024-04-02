@@ -1,52 +1,77 @@
+
 import { Button, Heading, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
+import { listOfMovies } from './DataMovieService'
+import MoviesCount from "./MoviesCount"
+import Like from "./common/Like"
 import { useState } from "react"
-import { listOfMovies, MoviesId } from './fakeMovieService'
 
 
 const Movies = () => {
-    const [movies, setMovies] = useState(listOfMovies)
+    const [movies, setMovies] = useState(listOfMovies);
 
-    const handleDelete = (movie: MoviesId) => {
+    function handleDelete({ ...movie }) {
         const newMovieList = movies.filter(el => movie.id !== el.id)
         setMovies(newMovieList)
         return movies
     }
 
+    function handleClicked({ ...movie }) {
+        const newMovies = movies.map(currentMovie => {
+            if (currentMovie.id === movie.id) {
+                const redColored = movie.color === ''
+                const newColor = redColored ? 'red' : ''
+                const newMovie = { ...currentMovie, color: newColor }
+                return newMovie
+            }
+            return currentMovie
+        })
+        setMovies(newMovies)
+    }
+
+
+
     const movieContents =
         movies.map(movie =>
-            <Tbody key={movie.id}>
+            <Tr key={movie.id}>
                 <Td>{movie.title}</Td>
                 <Td>{movie.genre.name}</Td>
                 <Td isNumeric>{movie.numberInStock}</Td>
                 <Td>{movie.dailyRentalRate}</Td>
-                <Td><Button onClick={() => handleDelete(movie)} colorScheme='red'>Button</Button></Td>
-            </Tbody>)
+                <Td>
+                    <Like liked={movie.liked}
+                        color={movie.color}
+                        onClick={() => handleClicked(movie)} />
+                </Td>
+                <Td>
+                    <Button onClick={() => handleDelete(movie)}
+                        colorScheme='red'>Button</Button>
+                </Td>
+                <Td>
+                </Td>
+            </Tr>)
 
-    function countLength() {
-        if (movies.length === 0) {
-            return `There are no movies in the list.`
-        } else {
-            return `Showing ${movies.length} movies in the list.`
-        }
-    }
+
 
     return (
         <>
             <Heading mb='7' as='h3' size='lg'>
-                {countLength()}
+                <MoviesCount movies={movies} />
             </Heading>
             <TableContainer>
                 <Table variant='simple'>
-                    {/* <TableCaption>Imperial to metric conversion factors</TableCaption> */}
                     <Thead>
                         <Tr>
                             <Th>Title</Th>
                             <Th>Genre</Th>
                             <Th>Stock</Th>
                             <Th>Rate</Th>
+                            <Th></Th>
+                            <Th></Th>
                         </Tr>
                     </Thead>
-                    {movieContents}
+                    <Tbody>
+                        {movieContents}
+                    </Tbody>
                 </Table>
             </TableContainer>
         </>

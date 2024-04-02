@@ -1,0 +1,6 @@
+.redHeart {
+  cursor: pointer;
+}
+.redHeart.active {
+  color: red;
+}

@@ -1,11 +1,18 @@
-export interface MoviesId {
-    id?: string;
-    title?: string;
-    numberInstock?: number;
-    dailyRentalRate?: number;
-}
 
 export const listOfMovies = [
+    {
+        id: '5b23823ca3eeb7f6fbccd89834983',
+        title: 'Poirot',
+        genre: {
+            id: '5b21ca3eeb7f6fbccd471818',
+            name: 'Detective',
+        },
+        numberInStock: 3,
+        dailyRentalRate: 9.5,
+        publishDate: '2018-01-03T19:04:28.809Z',
+        liked: true,
+        color: "",
+    },
     {
         id: '5b21ca3eeb7f6fbccd471815',
         title: 'Terminator',
@@ -16,6 +23,8 @@ export const listOfMovies = [
         numberInStock: 6,
         dailyRentalRate: 2.5,
         publishDate: '2018-01-03T19:04:28.809Z',
+        liked: true,
+        color: "",
     },
     {
         id: '5b21ca3eeb7f6fbccd471816',
@@ -26,6 +35,8 @@ export const listOfMovies = [
         },
         numberInStock: 5,
         dailyRentalRate: 2.5,
+        liked: true,
+        color: "",
     },
     {
         id: '5b21ca3eeb7f6fbccd471817',
@@ -36,6 +47,8 @@ export const listOfMovies = [
         },
         numberInStock: 8,
         dailyRentalRate: 3.5,
+        liked: true,
+        color: "",
     },
     {
         id: '5b21ca3eeb7f6fbccd471819',
@@ -46,6 +59,8 @@ export const listOfMovies = [
         },
         numberInStock: 7,
         dailyRentalRate: 3.5,
+        liked: true,
+        color: "",
     },
     {
         id: '5b21ca3eeb7f6fbccd47181a',
@@ -56,6 +71,8 @@ export const listOfMovies = [
         },
         numberInStock: 7,
         dailyRentalRate: 3.5,
+        liked: true,
+        color: "",
     },
     {
         id: '5b21ca3eeb7f6fbccd47181b',
@@ -66,6 +83,8 @@ export const listOfMovies = [
         },
         numberInStock: 7,
         dailyRentalRate: 3.5,
+        liked: true,
+        color: "",
     },
     {
         id: '5b21ca3eeb7f6fbccd47181e',
@@ -76,6 +95,8 @@ export const listOfMovies = [
         },
         numberInStock: 7,
         dailyRentalRate: 4.5,
+        liked: true,
+        color: "",
     },
     {
         id: '5b21ca3eeb7f6fbccd47181f',
@@ -86,6 +107,8 @@ export const listOfMovies = [
         },
         numberInStock: 4,
         dailyRentalRate: 3.5,
+        liked: true,
+        color: "",
     },
     {
         id: '5b21ca3eeb7f6fbccd471821',
@@ -96,6 +119,8 @@ export const listOfMovies = [
         },
         numberInStock: 7,
         dailyRentalRate: 3.5,
+        liked: true,
+        color: "",
     },
 ];
 
