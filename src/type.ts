@@ -3,7 +3,7 @@ export interface MoviesId {
     title?: string;
     numberInstock?: number;
     dailyRentalRate?: number;
-    liked?: boolean;
-    onClick: () => void;
-    color: string;
+    onClick?: () => void;
+    color?: string;
+   
 }

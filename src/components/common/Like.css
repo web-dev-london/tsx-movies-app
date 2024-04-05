@@ -2,5 +2,5 @@
   cursor: pointer;
 }
 .redHeart.active {
-  color: red;
+  color: #ff0b00;
 }

@@ -1,4 +1,5 @@
-import { MoviesId } from "./DataMovieService"
+import { MoviesId } from "../../type";
+
 
 
 const MoviesCount = (props: {

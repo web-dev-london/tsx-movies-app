@@ -10,7 +10,6 @@ export const listOfMovies = [
         numberInStock: 3,
         dailyRentalRate: 9.5,
         publishDate: '2018-01-03T19:04:28.809Z',
-        liked: true,
         color: "",
     },
     {
@@ -23,7 +22,6 @@ export const listOfMovies = [
         numberInStock: 6,
         dailyRentalRate: 2.5,
         publishDate: '2018-01-03T19:04:28.809Z',
-        liked: true,
         color: "",
     },
     {
@@ -35,7 +33,6 @@ export const listOfMovies = [
         },
         numberInStock: 5,
         dailyRentalRate: 2.5,
-        liked: true,
         color: "",
     },
     {
@@ -47,7 +44,6 @@ export const listOfMovies = [
         },
         numberInStock: 8,
         dailyRentalRate: 3.5,
-        liked: true,
         color: "",
     },
     {
@@ -59,7 +55,6 @@ export const listOfMovies = [
         },
         numberInStock: 7,
         dailyRentalRate: 3.5,
-        liked: true,
         color: "",
     },
     {
@@ -71,7 +66,6 @@ export const listOfMovies = [
         },
         numberInStock: 7,
         dailyRentalRate: 3.5,
-        liked: true,
         color: "",
     },
     {
@@ -83,7 +77,6 @@ export const listOfMovies = [
         },
         numberInStock: 7,
         dailyRentalRate: 3.5,
-        liked: true,
         color: "",
     },
     {
@@ -95,7 +88,6 @@ export const listOfMovies = [
         },
         numberInStock: 7,
         dailyRentalRate: 4.5,
-        liked: true,
         color: "",
     },
     {
@@ -107,7 +99,6 @@ export const listOfMovies = [
         },
         numberInStock: 4,
         dailyRentalRate: 3.5,
-        liked: true,
         color: "",
     },
     {
@@ -119,10 +110,35 @@ export const listOfMovies = [
         },
         numberInStock: 7,
         dailyRentalRate: 3.5,
-        liked: true,
+        color: "",
+    },
+    {
+        id: '5b21ca87834573925f6fbccd471821',
+        title: 'Green Book',
+        genre: {
+            id: '5b21ca3eeb7f6fbccd471818',
+            name: 'Biography',
+        },
+        numberInStock: 4,
+        dailyRentalRate: 6.5,
+        color: "",
+    },
+    {
+        id: '5b21ca3eeb7f6fbccduy34ui1o23',
+        title: 'Sherlock Holmes',
+        genre: {
+            id: '5b21ca3eeb7f6fbccd471818',
+            name: 'Detective',
+        },
+        numberInStock: 7,
+        dailyRentalRate: 8.5,
         color: "",
     },
 ];
+
+
+
+
 
 /* export function getMovies() {
     return listOfMovies;
